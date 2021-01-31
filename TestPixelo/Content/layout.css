@@ -1,0 +1,32 @@
+﻿@import url('site.css');
+@import url('index.css');
+
+.navbar-default {
+    background: linear-gradient(to top left, #0066eb 0%, #02015b 66%);
+    border-color: #f5b038;
+}
+
+.nav {
+    align-items: center;
+    flex-direction: column;
+}
+a {
+    color: #f39c12;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+    .navbar {
+        position: relative;
+    }
+
+    .nav {
+        align-items: flex-end;
+        flex-direction:unset;
+    }
+
+        .nav > li :first-child {
+            max-width: 360px;
+        }
+}

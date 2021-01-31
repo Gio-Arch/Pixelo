@@ -1,0 +1,65 @@
+﻿.grid-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-template-areas: "MatchDescription Rates Options";
+    text-align: center;
+    line-height: 1.9;
+    font-size: 1.5rem;
+    padding-bottom: 25px;
+}
+
+.MatchDescription {
+    grid-area: MatchDescription;
+}
+
+.Rates {
+    grid-area: Rates;
+}
+
+.Options {
+    grid-area: Options;
+}
+
+.btn {
+    font-size: 1.3rem;
+}
+
+.container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.Rates > span {
+    margin-right: 15px;
+}
+
+
+@media screen and (min-width: 600px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-template-areas: "MatchDescription Rates Options";
+        line-height: 1.5;
+        font-size: 2.0rem;
+    }
+
+    .MatchDescription {
+        grid-area: MatchDescription;
+    }
+
+    .Rates {
+        grid-area: Rates;
+    }
+
+    .Options {
+        grid-area: Options;
+    }
+
+
+    .btn {
+        font-size: 1.5rem;
+    }
+}

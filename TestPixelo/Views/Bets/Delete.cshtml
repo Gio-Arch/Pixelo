@@ -1,0 +1,47 @@
+﻿@model TestPixelo.Models.Bet
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="alert alert-dismissible alert-warning">
+
+    <h4 class="alert-heading">Deleting!</h4>
+    <p class="mb-0">
+        <span>Sicuro di voler cancellare questo evento?</span>
+    </p>
+</div>
+
+<div class="container">
+    <div class="grid-container">
+        <div class="MatchDescription">
+            <span>@Model.MatchDescription</span>
+        </div>
+        <div class="Rates">
+            <span>@Model.RateOne</span>
+            <span>@Model.RateDraw</span>
+            <span>@Model.RateTwo</span>
+        </div>
+        <div class="Options">
+        </div>
+    </div>
+</div>
+
+<div>
+    <dl class="dl-horizontal">
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-danger" />
+            </div>
+        }
+    </dl>
+</div>
+                @Html.ActionLink("Back to List", "Index")
+
+
+
